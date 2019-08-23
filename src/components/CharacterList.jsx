@@ -7,16 +7,17 @@ export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
 
   useEffect(() => {
-
-    axios
-        .get(`https://rickandmortyapi.com/api/`)
-        .then(response => {
-          console.log(response)
-          setInfo(response);
-        })
-        .catch(error => {
-          console.error(error);
-        });
+    const fetchData = () => {
+      axios.get(`https://rickandmortyapi.com/api/character/`)
+      .then(response => {
+        console.log(response.data.results)
+        setInfo(response.data.results)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
+    fetchData()
     // TODO: Add API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   }, []);
