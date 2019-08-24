@@ -5,13 +5,14 @@ import CharacterList from "./components/CharacterList";
 import CharacterCard from './components/CharacterCard';
 
 
+
 export default function App() {
   return (
     <main>
       <Header />
-      {/* <TabNav /> */}
+      {<TabNav/>}
       <CharacterList/>
-      <CharacterCard/>
+      {/* <CharacterCard/> */}
     </main>
     
   );

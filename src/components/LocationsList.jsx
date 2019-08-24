@@ -1,3 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-export default function LocationsList() {}
+const LocationsList = () => {
+    return(
+    <div className="LocationList">
+        <p>LocationList</p>
+    </div>
+    )
+}
+export default LocationsList;
